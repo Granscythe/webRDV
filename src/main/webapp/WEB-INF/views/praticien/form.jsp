@@ -18,19 +18,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/patient"> Patient</a>
+                    <a class="nav-link" href="http://localhost:8080/webRDV/patient"> Patient</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/praticien"> Praticien</a>
+                    <a class="nav-link" href="http://localhost:8080/webRDV/praticien"> Praticien</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/motif"> Motif</a>
+                    <a class="nav-link" href="http://localhost:8080/webRDV/motif"> Motif</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/RDV"> Rendez-vous</a>
+                    <a class="nav-link" href="http://localhost:8080/webRDV/RDV"> Rendez-vous</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/specialite"> Spécialités</a>
+                    <a class="nav-link" href="http://localhost:8080/webRDV/specialite"> Spécialités</a>
                 </li>
             </ul>
         </div>
