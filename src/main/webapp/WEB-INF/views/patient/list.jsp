@@ -13,29 +13,26 @@
 </head>
 <body>
 <div class=" navbar navbar-expand-lg navbar-light">
-        <a href="#" class="navbar-brand"><img class="logo" src="https://d30y9cdsu7xlg0.cloudfront.net/png/317354-200.png"></a>
+        <a href="#" class="navbar-brand"><img class="logo" style="width:10%; height:10%;" src="https://upload.wikimedia.org/wikipedia/fr/3/30/Logo_Union_Bordeaux_B%C3%A8gles_2018.svg" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/matiere"> Matiere</a>
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/patient"> Patient</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/formateur"> Formateur</a>
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/praticien"> Praticien</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/patient"> patient</a>
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/motif"> Motif</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">A Propos</a>
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/RDV"> Rendez-vous</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"> Contact</a>
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/specialite"> Spécialités</a>
                 </li>
             </ul>
         </div>
@@ -50,6 +47,8 @@
 					<thead>
 						<tr>
 							<th>Identifiant</th>
+							<th>Prenom</th>
+							<th>Nom</th>
 							<th>Email</th>
 							<th>Mot de passe</th>
 							<th>Numéro de sécurité sociale</th>
@@ -66,6 +65,8 @@
 							</c:url>
 							<tr>
 								<td>${patient.id}</td>
+								<td>${patient.prenom}</td>
+								<td>${patient.nom}</td>
 								<td>${patient.mail}</td>
 								<td>${patient.mdp}</td>
 								<td>${patient.numSecuriteSociale}</td>
