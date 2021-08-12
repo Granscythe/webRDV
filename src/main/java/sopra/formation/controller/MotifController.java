@@ -43,7 +43,7 @@ public class MotifController {
 		Motif motif = motifRepo.findById(idMotif).get();
 
 		// ETAPE 3
-		model.addAttribute("moti", motif);
+		model.addAttribute("motif", motif);
 
 		// ETAPE 4
 		return "motif/form";
@@ -51,7 +51,7 @@ public class MotifController {
 	
 	@PostMapping("/motif/save")
 	public String save(@RequestParam(required = false) Long id, @RequestParam(required = false, defaultValue = "0") int version, @RequestParam String intitule, @RequestParam Integer duree) {
-		Motif motif = new Motif(id, intitule, duree);
+		Motif motif = new Motif(id, intitule, duree,null,null);
 		motif.setVersion(version);
 		
 		motifRepo.save(motif);
@@ -59,7 +59,7 @@ public class MotifController {
 		return "redirect:/motif";
 	}
 
-	@GetMapping("/modif/delete")
+	@GetMapping("/motif/delete")
 	public String delete(@RequestParam Long id) {
 		motifRepo.deleteById(id);
 		
