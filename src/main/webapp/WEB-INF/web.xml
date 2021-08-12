@@ -25,7 +25,7 @@
      </context-param>
     <context-param>
          <param-name>contextConfigLocation</param-name>
-         <param-value>sopra.formation.config.ApplicationConfig</param-value>
+         <param-value>sopra.formation.config.WebConfig</param-value>
      </context-param>
 
 
