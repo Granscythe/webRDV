@@ -29,18 +29,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${mesMotifs}" var="moti">
+						<c:forEach items="${mesMotifs}" var="motif">
 							<c:url value="/motif/edit" var="editUrl">
-								<c:param name="id" value="${moti.id}"/>
+								<c:param name="id" value="${motif.id}"/>
 							</c:url>
 							<c:url value="/motif/delete" var="deleteUrl">
-								<c:param name="id" value="${moti.id}"/>
+								<c:param name="id" value="${motif.id}"/>
 							</c:url>
 							<tr>
-								<td>${moti.id}</td>
-								<td>${moti.version}</td>
-								<td>${moti.intitule}</td>
-								<td>${moti.duree}</td>
+								<td>${motif.id}</td>
+								<td>${motif.version}</td>
+								<td>${motif.intitule}</td>
+								<td>${motif.duree}</td>
 								<td><div class="btn-group btn-group-sm">
 									<a href="${editUrl}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 									<a href="${deleteUrl}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
@@ -50,7 +50,7 @@
 					</tbody>
 				</table>
 			</div>
-			<c:url value="motif/add" var="addUrl"/>
+			<c:url value="/motif/add" var="addUrl"/>
 			<div class="card-footer">
 				<a href="${addUrl}" class="btn btn-success btn-lg">
 					<i class="fa fa-plus"></i>
