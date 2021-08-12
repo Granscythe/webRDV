@@ -30,7 +30,9 @@ public class RDVController {
 	}
 	
 	@GetMapping("/rdv/add")
-	public String add() {
+	public String add(Model model) {
+		model.addAttribute("statuts", Statut.values());
+		
 		return "rdv/form";
 	}
 	
@@ -39,6 +41,7 @@ public class RDVController {
 		
 		RDV rdv = rdvRepo.findById(id).get();
 
+		model.addAttribute("statuts", Statut.values());
 		model.addAttribute("rdv", rdv);
 
 		return "rdv/form";

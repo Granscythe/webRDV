@@ -5,27 +5,32 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Edition du Rendez-vous</title>
+<title>Edition des motifs</title>
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css"/>">
 <link rel="stylesheet" href="<c:url value="/css/all.css"/>">
 </head>
 <body>
 	<div class="container-fluid">
-		<div id="rdvForm" class="card mt-3">
-			<form action="<c:url value="/rdv/save"/>" method="post">
-				<input type="hidden" name="version" value="${rdv.version}">
+		<div id="motifForm" class="card mt-3">
+			<form action="<c:url value="/motif/save"/>" method="post">
+				<input type="hidden" name="version" value="${moti.version}">
 				<div class="card-header bg-info text-white">
-					<h3>Edition du Rendez-vous</h3>
+					<h3>Edition des motifs</h3>
 				</div>
 				<div class="card-body">
 					<div class="form-group">
 						<label for="id">Identifiant:</label> <input type="number" readonly
-							class="form-control" id="id" name="id" value="${rdv.id}">
+							class="form-control" id="id" name="id" value="${moti.id}">
 					</div>
 					<div class="form-group">
-						<label for="statut">Statut:</label> <input type="text"
-							class="form-control" id="statut" name="statut"
-							value="${rdv.statut}">
+						<label for="commentaires">Intitule:</label> <input type="text"
+							class="form-control" id="ititule" name="intitule"
+							value="${moti.intitule}">
+					</div>
+					<div class="form-group">
+						<label for="promotion">Duree</label> <input type="number"
+							class="form-control" id="duree" name="duree"
+							value="${moti.duree}">
 					</div>
 				</div>
 				<div class="card-footer">
@@ -33,7 +38,7 @@
 						<button type="submit" class="btn btn-success">
 							<i class="fa fa-check"></i>
 						</button>
-						<c:url value="/rdv/cancel" var="cancelUrl"/>
+						<c:url value="/motif/cancel" var="cancelUrl"/>
 						<a href="${cancelUrl}" type="button" class="btn btn-warning">
 							<i class="fa fa-undo"></i>
 						</a>
