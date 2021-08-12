@@ -13,24 +13,24 @@
 	<div class="container-fluid">
 		<div id="motifForm" class="card mt-3">
 			<form action="<c:url value="/motif/save"/>" method="post">
-				<input type="hidden" name="version" value="${moti.version}">
+				<input type="hidden" name="version" value="${motif.version}">
 				<div class="card-header bg-info text-white">
 					<h3>Edition des motifs</h3>
 				</div>
 				<div class="card-body">
 					<div class="form-group">
 						<label for="id">Identifiant:</label> <input type="number" readonly
-							class="form-control" id="id" name="id" value="${moti.id}">
+							class="form-control" id="id" name="id" value="${motif.id}">
 					</div>
 					<div class="form-group">
 						<label for="commentaires">Intitule:</label> <input type="text"
 							class="form-control" id="ititule" name="intitule"
-							value="${moti.intitule}">
+							value="${motif.intitule}">
 					</div>
 					<div class="form-group">
 						<label for="promotion">Duree</label> <input type="number"
 							class="form-control" id="duree" name="duree"
-							value="${moti.duree}">
+							value="${motif.duree}">
 					</div>
 				</div>
 				<div class="card-footer">
