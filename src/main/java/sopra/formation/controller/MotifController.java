@@ -43,7 +43,7 @@ public class MotifController {
 		Motif motif = motifRepo.findById(idMotif).get();
 
 		// ETAPE 3
-		model.addAttribute("moti", motif);
+		model.addAttribute("motif", motif);
 
 		// ETAPE 4
 		return "motif/form";
@@ -59,7 +59,7 @@ public class MotifController {
 		return "redirect:/motif";
 	}
 
-	@GetMapping("/modif/delete")
+	@GetMapping("/motif/delete")
 	public String delete(@RequestParam Long id) {
 		motifRepo.deleteById(id);
 		
