@@ -22,18 +22,26 @@
 						<label for="id">Identifiant:</label> <input type="number" readonly
 							class="form-control" id="id" name="id" value="${rdv.id}">
 					</div>
-					<div class="form-group">
-						<label for="statut">Statut:</label> <input type="text"
-							class="form-control" id="statut" name="statut"
-							value="${rdv.statut}">
-					</div>
+					
+					
+					
+						<label for="statut">Statut:</label>
+					<select class="form-control" name ="statut">
+						
+						<c:forEach items="${statuts}" var="statut">
+							<option value="${statut}" ${rdv.statut eq statut ? 'selected':'' }>${statut}</option>
+						</c:forEach>
+			
+					</select>
+					
+					
 				</div>
 				<div class="card-footer">
 					<div class="btn-group btn-group-lg float-right">
 						<button type="submit" class="btn btn-success">
 							<i class="fa fa-check"></i>
 						</button>
-						<c:url value="/rdv/cancel" var="cancelUrl"/>
+						<c:url value="/rdv/cancel" var="cancelUrl" />
 						<a href="${cancelUrl}" type="button" class="btn btn-warning">
 							<i class="fa fa-undo"></i>
 						</a>

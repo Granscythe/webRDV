@@ -27,7 +27,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${mesRDV}" var="rdv">
+						<c:forEach items="${mesrdvs}" var="rdv">
 							<c:url value="/rdv/edit" var="editUrl">
 								<c:param name="id" value="${rdv.id}"/>
 							</c:url>
