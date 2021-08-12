@@ -53,7 +53,7 @@ public class LieuController {
 	}
 	
 	@PostMapping("/lieu/save")
-	public String save(@RequestParam(required = false) Long id, @RequestParam(required = false, defaultValue = "0") int version, @RequestParam String typeLieu ,  @RequestParam String rue , @RequestParam String ville, @RequestParam String codePostal, @RequestParam String telephone , @RequestParam int numero) {
+	public String save(@RequestParam(required = false) Long id, @RequestParam(required = false, defaultValue = "0") int version, @RequestParam String typeLieu ,  @RequestParam String rue , @RequestParam String ville, @RequestParam String codePostal, @RequestParam int numero) {
 		Lieu lieu = new Lieu(typeLieu, rue, ville, codePostal, numero); 
 		lieu.getId();  
 		lieuRepo.save(lieu);

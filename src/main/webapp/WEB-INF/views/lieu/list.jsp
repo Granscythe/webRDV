@@ -40,7 +40,7 @@
 							</c:url>
 							<tr>
 								<td>${lieu.id}</td>
-								<td>${lieu.typedeLieu}</td>
+								<td>${lieu.typeLieu}</td>
 								<td>${lieu.rue}</td>
 								<td>${lieu.ville}</td>
 								<td>${lieu.codePostal}</td>
