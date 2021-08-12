@@ -49,8 +49,8 @@ public class PatientController {
 	}
 	
 	@PostMapping("/patient/save")
-	public String save(@RequestParam(required = false) Long id, @RequestParam(required = false, defaultValue = "0") int version, String mail, String mdp,String numSecuriteSociale) {
-		Patient patient = new Patient(id, mail, mdp,numSecuriteSociale, null);
+	public String save(@RequestParam(required = false) Long id, @RequestParam(required = false, defaultValue = "0") int version, @RequestParam String nom, @RequestParam String prenom, @RequestParam String mail, @RequestParam String mdp, @RequestParam String numSecuriteSociale) {
+		Patient patient = new Patient(id,0,nom,prenom, mail, mdp,numSecuriteSociale, null);
 		patient.setVersion(version);
 		
 		patientRepo.save(patient);
