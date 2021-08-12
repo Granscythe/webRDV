@@ -2,12 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
+<%-- ETAPE 5 --%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Liste des Rendez-Vous</title>
+<title>Liste des motifs</title>
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css"/>">
 <link rel="stylesheet" href="<c:url value="/css/all.css"/>">
 </head>
@@ -15,28 +15,32 @@
 	<div class="container-fluid">
 		<div class="card mt-3">
 			<div class="card-header bg-info text-white">
-				<h2>Liste des rendez-vous</h2>
+				<h2>Liste des motifs</h2>
 			</div>
 			<div class="card-body">
-				<table id="rdvTable" class="table table-striped">
+				<table id="motifTable" class="table table-striped">
 					<thead>
 						<tr>
 							<th>Identifiant</th>
-							<th>Statut</th>
+							<th>Version</th>
+							<th>Intitule</th>
+							<th>Duree</th>
 							<th></th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${mesRDV}" var="rdv">
-							<c:url value="/rdv/edit" var="editUrl">
-								<c:param name="id" value="${rdv.id}"/>
+						<c:forEach items="${mesMotifs}" var="moti">
+							<c:url value="/motif/edit" var="editUrl">
+								<c:param name="id" value="${moti.id}"/>
 							</c:url>
-							<c:url value="/rdv/delete" var="deleteUrl">
-								<c:param name="id" value="${rdv.id}"/>
+							<c:url value="/motif/delete" var="deleteUrl">
+								<c:param name="id" value="${moti.id}"/>
 							</c:url>
 							<tr>
-								<td>${rdv.id}</td>
-								<td>${rdv.statut}</td>
+								<td>${moti.id}</td>
+								<td>${moti.version}</td>
+								<td>${moti.intitule}</td>
+								<td>${moti.duree}</td>
 								<td><div class="btn-group btn-group-sm">
 									<a href="${editUrl}" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 									<a href="${deleteUrl}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
@@ -46,7 +50,7 @@
 					</tbody>
 				</table>
 			</div>
-			<c:url value="rdv/add" var="addUrl"/>
+			<c:url value="motif/add" var="addUrl"/>
 			<div class="card-footer">
 				<a href="${addUrl}" class="btn btn-success btn-lg">
 					<i class="fa fa-plus"></i>
