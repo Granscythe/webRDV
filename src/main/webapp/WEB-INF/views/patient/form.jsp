@@ -10,9 +10,34 @@
 <link rel="stylesheet" href="<c:url value="/css/all.css"/>">
 </head>
 <body>
+<div class=" navbar navbar-expand-lg navbar-light">
+        <a href="#" class="navbar-brand"><img class="logo" style="width:10%; height:10%;" src="https://upload.wikimedia.org/wikipedia/fr/3/30/Logo_Union_Bordeaux_B%C3%A8gles_2018.svg" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/patient"> Patient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/praticien"> Praticien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/motif"> Motif</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/RDV"> Rendez-vous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/formation-web-spring-eric/specialite"> Spécialités</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 	<div class="container-fluid">
 		<div id="patientuationForm" class="card mt-3">
-			<form action="<c:url value="/patientuation/save"/>" method="post">
+			<form action="<c:url value="/patient/save"/>" method="post">
 				<input type="hidden" name="version" value="${patient.version}">
 				<div class="card-header bg-info text-white">
 					<h3>Edition des patients</h3>
@@ -22,10 +47,20 @@
 						<label for="id">Identifiant:</label> <input type="number" readonly
 							class="form-control" id="id" name="id" value="${patient.id}">
 					</div>
-					<div class="form-group">
+										<div class="form-group">
 						<label for="mail">Email </label> <input type="text"
 							class="form-control" id="mail" name="mail"
 							value="${patient.mail}">
+					</div>
+										<div class="form-group">
+						<label for="prenom">Prenom </label> <input type="text"
+							class="form-control" id="prenom" name="prenom"
+							value="${patient.prenom}">
+					</div>
+					<div class="form-group">
+						<label for="nom">Nom </label> <input type="text"
+							class="form-control" id="nom" name="nom"
+							value="${patient.nom}">
 					</div>
 					<div class="form-group">
 						<label for="mdp">Mot de passe</label> <input type="text"
