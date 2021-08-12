@@ -51,7 +51,7 @@ public class MotifController {
 	
 	@PostMapping("/motif/save")
 	public String save(@RequestParam(required = false) Long id, @RequestParam(required = false, defaultValue = "0") int version, @RequestParam String intitule, @RequestParam Integer duree) {
-		Motif motif = new Motif(id, intitule, duree);
+		Motif motif = new Motif(id, intitule, duree,null,null);
 		motif.setVersion(version);
 		
 		motifRepo.save(motif);
