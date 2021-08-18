@@ -12,6 +12,34 @@
 <link rel="stylesheet" href="<c:url value="/css/all.css"/>">
 </head>
 <body>
+<div class=" navbar navbar-expand-lg navbar-light">
+        <a href="#" class="navbar-brand"><img class="logo" style="width:10%; height:10%;" src="https://upload.wikimedia.org/wikipedia/fr/3/30/Logo_Union_Bordeaux_B%C3%A8gles_2018.svg" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/webRDV/patient"> Patient</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/webRDV/praticien"> Praticien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/webRDV/motif"> Motif</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/webRDV/RDV"> Rendez-vous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/webRDV/specialite"> Spécialités</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="http://localhost:8080/webRDV/lieu"> Lieux</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 	<div class="container-fluid">
 		<div class="card mt-3">
 			<div class="card-header bg-info text-white">
@@ -40,7 +68,7 @@
 							</c:url>
 							<tr>
 								<td>${lieu.id}</td>
-								<td>${lieu.typedeLieu}</td>
+								<td>${lieu.typeLieu}</td>
 								<td>${lieu.rue}</td>
 								<td>${lieu.ville}</td>
 								<td>${lieu.codePostal}</td>
